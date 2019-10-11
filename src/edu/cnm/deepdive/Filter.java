@@ -1,5 +1,8 @@
 package edu.cnm.deepdive;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This class contains stubs of the {@link #bandpass(int[], int, int)} and
  * {@link #smooth(int[])} methods. Implementation of these methods is
@@ -37,6 +40,12 @@ public class Filter {
    * @return            filtered data.
    */
   public static int[] bandpass(int[] data, int lowerBound, int upperBound) {
+    List<Integer> nonBandpass = new ArrayList<>();
+    for (int i = 0; i < data.length; i++) {
+      if (data [i] >= 0) {
+        nonBandpass.add(data[i]);
+      }
+    }
     return null; // TODO Replace this line with implementation.
   }
 
